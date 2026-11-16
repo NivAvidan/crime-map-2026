@@ -1,0 +1,16 @@
+{
+  "name": "crimemap-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=../.env index.js",
+    "start:csv": "node --env-file=../.env --env-file=../.env.csv index.js",
+    "import": "node --env-file=../.env scripts/import.js",
+    "geocode": "node scripts/geocode.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "express": "^4.21.1",
+    "oracledb": "^6.6.0"
+  }
+}

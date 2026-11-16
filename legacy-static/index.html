@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>מפת הפשיעה בישראל</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="data.js"></script>
+<style>
+:root{--navy:#0b2a6b;--navy2:#123c97;--blue:#1a5fd6;--light:#eef3fb;--ink:#12213f;--mut:#5b6b88;--line:#dbe4f3}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:"Segoe UI",Arial,"Heebo",sans-serif;color:var(--ink);background:var(--light)}
+header{height:64px;background:linear-gradient(90deg,#0a2460,#143f9e 60%,#0b2a6b);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;box-shadow:0 2px 10px rgba(0,0,0,.25);position:relative;z-index:5}
+header h1{margin:0;font-size:28px;font-weight:800;letter-spacing:.5px;display:flex;align-items:center;gap:14px}
+header .yr{font-size:15px;opacity:.9}
+.shield{width:34px;height:38px}
+#mapView,#cityView{position:absolute;inset:64px 0 0 0}
+#map{position:absolute;inset:0}
+#cityView{display:none;overflow:auto;padding:20px 24px 40px}
+body.city #cityView{display:block}
+body.city #mapView{visibility:hidden}
+.search{position:absolute;top:18px;right:20px;width:min(420px,calc(100% - 100px));z-index:3}
+.search input{width:100%;height:50px;border:0;border-radius:14px;padding:0 18px;font-size:17px;font-family:inherit;box-shadow:0 4px 18px rgba(10,30,80,.3);outline:none}
+.sugg{background:#fff;border-radius:12px;margin-top:6px;max-height:320px;overflow:auto;box-shadow:0 6px 20px rgba(10,30,80,.3);display:none}
+.sugg div{padding:10px 16px;cursor:pointer;display:flex;justify-content:space-between;border-bottom:1px solid #f0f3f9}
+.sugg div:hover,.sugg div.act{background:#e8f0ff}
+.sugg small{color:var(--mut)}
+.card{position:absolute;top:84px;right:20px;width:min(380px,calc(100% - 40px));background:rgba(255,255,255,.97);border-radius:16px;box-shadow:0 10px 30px rgba(10,30,80,.35);z-index:2;display:none;overflow:hidden}
+.card .hd{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.card .hd b{font-size:24px;color:var(--navy)}
+.card .x{border:0;background:none;font-size:22px;cursor:pointer;color:var(--mut)}
+.card .row{padding:12px 20px;border-bottom:1px solid var(--line);font-size:16px}
+.card .row b{font-size:18px}
+.card .note{padding:14px 20px;color:var(--mut);font-size:15px;line-height:1.5}
+.btn{background:linear-gradient(180deg,#1d58c9,#0b2f86);color:#fff;border:0;border-radius:10px;padding:12px 22px;font-size:17px;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 3px 10px rgba(10,40,120,.35)}
+.card .btn{display:block;width:calc(100% - 40px);margin:16px 20px}
+.hint{position:absolute;bottom:14px;right:50%;transform:translateX(50%);background:rgba(11,42,107,.85);color:#fff;padding:8px 16px;border-radius:20px;font-size:14px;z-index:2;pointer-events:none;white-space:nowrap}
+.pin{background:#0b2a6b;color:#fff;padding:4px 10px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4);border:1.5px solid #fff;white-space:nowrap}
+.pin:hover{background:#1a5fd6}
+/* city screen */
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.top h2{margin:0;font-size:32px;color:var(--navy)}
+.grid{display:grid;gap:16px}
+.kpis{grid-template-columns:repeat(4,1fr)}
+.main{grid-template-columns:1.1fr 1.3fr 1.3fr;margin-top:16px}
+.two{grid-template-columns:1fr 1fr;margin-top:16px}
+.box{background:#fff;border-radius:16px;padding:18px 20px;box-shadow:0 2px 12px rgba(20,50,120,.1);border:1px solid var(--line);min-width:0}
+.box h3{margin:0 0 12px;font-size:17px;color:var(--navy)}
+.big{font-size:38px;font-weight:800;color:var(--navy);line-height:1.1}
+.sub{color:var(--mut);font-size:13px;margin-top:4px}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;direction:ltr}
+.seg button{flex:1;border:0;background:#fff;padding:10px 4px;font-size:15px;font-family:inherit;cursor:pointer;border-inline-start:1px solid var(--line)}
+.seg button.on{background:var(--navy2);color:#fff;font-weight:700}
+.bars{display:flex;align-items:flex-end;gap:18px;height:220px;direction:ltr;padding-top:24px}
+.bars .b{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;cursor:pointer}
+.bars .b i{display:block;width:100%;background:linear-gradient(180deg,#6ea8f5,#3d7fe0);border-radius:8px 8px 0 0;min-height:2px}
+.bars .b.on i{background:linear-gradient(180deg,#1d58c9,#0b2f86)}
+.bars .b span{font-weight:700;margin-bottom:4px}
+.bars .b em{font-style:normal;font-weight:700;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:right;color:var(--mut);font-size:13px;padding:6px 8px;background:#f1f5fc}
+td{padding:7px 8px;border-bottom:1px solid #eef2f9}
+tr.sel td{background:#dce9ff;font-weight:700}
+tr.clk{cursor:pointer}
+tr.clk:hover td{background:#eef4ff}
+.num{text-align:left;direction:ltr;white-space:nowrap}
+.meter{display:inline-block;height:10px;background:linear-gradient(90deg,#1d58c9,#6ea8f5);border-radius:5px;vertical-align:middle;margin-inline-start:6px}
+.scroll{max-height:380px;overflow:auto}
+.chip{display:inline-block;background:#e8f0ff;border-radius:14px;padding:5px 14px;margin-bottom:10px;font-size:14px}
+.kv{background:#f1f5fc;border-radius:10px;padding:10px 14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:10px}
+.kv span{color:var(--mut);text-align:left}
+@media(max-width:1000px){.kpis,.main,.two{grid-template-columns:1fr}header h1{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <h1><svg class="shield" viewBox="0 0 24 26" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 1.5l9 3v8c0 6-4 10-9 12-5-2-9-6-9-12v-8z"/><path d="M8 13l3 3 5-6"/></svg>מפת הפשיעה בישראל</h1>
+  <div class="yr">📅 שנת נתונים: <b id="yr"></b> · מקור: משטרת ישראל</div>
+</header>
+
+<div id="mapView">
+  <div id="map"></div>
+  <div class="search"><input id="q" placeholder="🔍 חיפוש עיר או יישוב" autocomplete="off"><div class="sugg" id="sugg"></div></div>
+  <div class="card" id="card"></div>
+  <div class="hint">לחצו על שם יישוב במפה · גרירה ימנית / Ctrl+גרירה לסיבוב והטיה</div>
+</div>
+
+<div id="cityView"></div>
+
+<script>
+const D = window.CRIME, LOC = D.loc;
+document.getElementById('yr').textContent = D.year;
+const fmt = n => n.toLocaleString('en-US');
+const norm = s => (s||'').replace(/[\s\-־–'"׳״().]/g,'').replace(/יי/g,'י').replace(/וו/g,'ו');
+const sum = a => a.reduce((x,y)=>x+y,0);
+const byName = {};
+for (const [code,L] of Object.entries(LOC)) { L.code = code; L.total = sum(L.q); byName[norm(L.n)] = L; }
+const list = Object.values(LOC).sort((a,b)=>b.total-a.total);
+const findLoc = name => { const k = norm(name); return byName[k] || list.find(L => { const n = norm(L.n); return k.length>2 && (n.startsWith(k) || k.startsWith(n)); }); };
+
+/* ---------- MAP ---------- */
+try { maplibregl.setRTLTextPlugin('https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js', false); } catch(e){}
+const map = new maplibregl.Map({
+  container:'map', style:'https://tiles.openfreemap.org/styles/liberty',
+  center:[35.0,31.75], zoom:8.3, pitch:58, bearing:-12, maxPitch:75,
+  maxBounds:[[32.5,28.8],[37.8,34.0]]
+});
+map.addControl(new maplibregl.NavigationControl({visualizePitch:true}), 'top-left');
+const PLACE = l => l.type==='symbol' && l['source-layer']==='place';
+let placeLayers = [];
+map.on('load', () => {
+  for (const l of map.getStyle().layers) {
+    if (l.type==='symbol' && l.layout && l.layout['text-field'])
+      map.setLayoutProperty(l.id,'text-field',['coalesce',['get','name:he'],['get','name']]);
+    if (PLACE(l)) placeLayers.push(l.id);
+  }
+  PINS.forEach(([name,lng,lat]) => {
+    const L = findLoc(name); if (!L) return;
+    L.ll = [lng,lat];
+    const el = document.createElement('div'); el.className='pin'; el.textContent='📍 '+L.n;
+    el.onclick = e => { e.stopPropagation(); select(L.n, [lng,lat], true); };
+    new maplibregl.Marker({element:el, anchor:'bottom'}).setLngLat([lng,lat]).addTo(map);
+  });
+});
+const PINS = [['ירושלים',35.2137,31.7683],['תל אביב יפו',34.7818,32.0853],['חיפה',34.9896,32.794],['באר שבע',34.7913,31.2518],
+ ['נתניה',34.8532,32.3215],['אשדוד',34.6553,31.8044],['פתח תקווה',34.8878,32.0841],['ראשון לציון',34.7894,31.973],
+ ['אילת',34.9519,29.5577],['נצרת',35.3035,32.6996],['טבריה',35.5312,32.7922],['אשקלון',34.5715,31.6688]];
+function placeAt(pt){
+  if(!placeLayers.length) return null;
+  const f = map.queryRenderedFeatures([[pt.x-14,pt.y-14],[pt.x+14,pt.y+14]],{layers:placeLayers});
+  return f.find(x => ['city','town','village','hamlet','suburb'].includes(x.properties.class)) || null;
+}
+map.on('mousemove', e => map.getCanvas().style.cursor = placeAt(e.point) ? 'pointer' : '');
+map.on('click', e => {
+  const f = placeAt(e.point); if (!f) return;
+  select(f.properties['name:he'] || f.properties.name, f.geometry.coordinates, true);
+});
+let marker;
+function select(name, ll, fly){
+  const L = findLoc(name), card = document.getElementById('card');
+  if (ll) {
+    if (L) L.ll = ll;
+    marker && marker.remove();
+    marker = new maplibregl.Marker({color:'#1a5fd6'}).setLngLat(ll).addTo(map);
+    if (fly) map.flyTo({center:ll, zoom:Math.max(map.getZoom(),13.5), pitch:62, speed:.9, essential:true});
+  }
+  card.style.display='block';
+  card.innerHTML = `<div class="hd"><b>📍 ${L?L.n:name}</b><button class="x" onclick="card.style.display='none'">✕</button></div>` + (L ?
+    `<div class="row">📊 רשומות עבירה: <b>${fmt(L.total)}</b></div>
+     <div class="row">🧾 מזהים ייחודיים: <b>${fmt(L.ut)}</b></div>
+     <div class="row">📅 שנת נתונים: <b>${D.year}</b> · רבעונים Q1–Q4</div>
+     <button class="btn" onclick="openCity('${L.code}')">למסך הנתונים המלא ‹</button>`
+    : `<div class="note"><b>אין נתונים זמינים ליישוב זה בקובץ המקור.</b><br>היעדר נתונים אינו מעיד על היעדר פשיעה.</div>`);
+}
+/* search */
+const q = document.getElementById('q'), sugg = document.getElementById('sugg');
+q.oninput = () => {
+  const k = norm(q.value);
+  const r = k ? list.filter(L => norm(L.n).includes(k)).slice(0,12) : [];
+  sugg.style.display = r.length ? 'block' : 'none';
+  sugg.innerHTML = r.map(L => `<div data-c="${L.code}"><span>${L.n}</span><small>${fmt(L.total)} רשומות</small></div>`).join('');
+};
+q.onkeydown = e => { if (e.key==='Enter' && sugg.firstChild) pick(sugg.firstChild.dataset.c); };
+sugg.onclick = e => { const d = e.target.closest('div[data-c]'); if (d) pick(d.dataset.c); };
+async function pick(code){
+  const L = LOC[code]; sugg.style.display='none'; q.value = L.n;
+  select(L.n, L.ll, true);
+  if (!L.ll) try {
+    const r = await (await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=il,ps&accept-language=he&q='+encodeURIComponent(L.n))).json();
+    if (r[0]) select(L.n, [+r[0].lon, +r[0].lat], true);
+  } catch(e){}
+}
+
+/* ---------- CITY SCREEN ---------- */
+let cur, curQ = -1, curG = 0;
+function openCity(code){ cur = LOC[code]; curQ = -1; curG = 0; document.body.classList.add('city'); render(); document.getElementById('cityView').scrollTop = 0; }
+function back(){ document.body.classList.remove('city'); map.resize(); }
+const qv = a => curQ<0 ? sum(a) : a[curQ];
+function render(){
+  const L = cur, tot = qv(L.q), uniq = curQ<0 ? L.ut : L.u[curQ], mx = Math.max(...L.q,1);
+  const groups = L.g.map(g => ({n:g.n, c:sum(g.t.map(t=>qv(t.q))), t:g.t})).filter(g=>g.c).sort((a,b)=>b.c-a.c);
+  if (curG >= groups.length) curG = 0;
+  const G = groups[curG], gmx = groups[0] ? groups[0].c : 1;
+  const types = G ? G.t.map(t=>({n:t.n,c:qv(t.q)})).filter(t=>t.c).sort((a,b)=>b.c-a.c) : [];
+  const qlbl = curQ<0 ? 'כל השנה' : 'Q'+(curQ+1);
+  const kv = (lbl, arr) => `<div class="kv"><b>${lbl}</b><span>${arr.length ? arr.map(x=>`${x[0]} (${fmt(x[1])})`).join(' · ') : '—'}</span></div>`;
+  document.getElementById('cityView').innerHTML = `
+  <div class="top"><h2>📍 נתוני פשיעה – ${L.n}</h2><button class="btn" onclick="back()">› חזרה למפה</button></div>
+  <div class="grid kpis">
+    <div class="box"><h3>סך רשומות עבירה</h3><div class="big">${fmt(tot)}</div><div class="sub">${qlbl}</div></div>
+    <div class="box"><h3>מזהים ייחודיים (FictiveIDNumber)</h3><div class="big">${fmt(uniq)}</div><div class="sub">בכפוף לאימות משמעות המזהה מול המקור</div></div>
+    <div class="box"><h3>שנת נתונים</h3><div class="big">${D.year}</div><div class="sub">קוד יישוב: ${L.code}</div></div>
+    <div class="box"><h3>בחירת רבעון</h3><div class="seg">${['כל השנה','Q1','Q2','Q3','Q4'].map((t,i)=>`<button class="${curQ===i-1?'on':''}" onclick="curQ=${i-1};render()">${t}</button>`).join('')}</div></div>
+  </div>
+  <div class="grid main">
+    <div class="box"><h3>התפלגות רשומות לפי רבעונים</h3><div class="bars">${L.q.map((v,i)=>`<div class="b ${curQ===i?'on':''}" onclick="curQ=${i};render()"><span>${fmt(v)}</span><i style="height:${v/mx*100}%"></i><em>Q${i+1}</em></div>`).join('')}</div></div>
+    <div class="box"><h3>קבוצות עבירה <span class="sub">(${qlbl} · לחצו לפירוט)</span></h3><div class="scroll"><table><tr><th>קבוצת עבירה</th><th>רשומות</th><th>חלק יחסי</th></tr>
+      ${groups.map((g,i)=>`<tr class="clk ${i===curG?'sel':''}" onclick="curG=${i};render()"><td>${g.n}</td><td class="num">${fmt(g.c)}</td><td class="num">${(g.c/tot*100).toFixed(1)}%<span class="meter" style="width:${Math.max(g.c/gmx*70,2)}px"></span></td></tr>`).join('')}</table></div></div>
+    <div class="box"><h3>סוגי עבירה בתוך הקבוצה</h3><div class="chip">קבוצה נבחרת: <b>${G?G.n:'—'}</b></div><div class="scroll"><table><tr><th>סוג עבירה</th><th>רשומות</th></tr>
+      ${types.map(t=>`<tr><td>${t.n}</td><td class="num">${fmt(t.c)}</td></tr>`).join('')}</table></div></div>
+  </div>
+  <div class="grid two">
+    <div class="box"><h3>שיוך משטרתי <span class="sub">(כל השנה · מספר רשומות)</span></h3>${kv('מחוז',L.pd)}${kv('מרחב',L.pm)}${kv('תחנה',L.ps)}</div>
+    <div class="box"><h3>אזורים סטטיסטיים <span class="sub">(כל השנה · ${L.saCount} אזורים · ${fmt(L.saMissing)} רשומות ללא אזור)</span></h3><div class="scroll" style="max-height:220px"><table>
+      ${L.sa.length ? L.sa.map(s=>`<tr><td>${s[0]}</td><td class="num">${fmt(s[1])}</td></tr>`).join('') : '<tr><td>אין מידע על אזורים סטטיסטיים ליישוב זה</td></tr>'}</table></div></div>
+  </div>
+  <p class="sub" style="margin-top:16px">הספירה היא של רשומות עבירה ולא בהכרח של אירועים נפרדים. בקובץ ${fmt(D.total)} רשומות, מתוכן ${fmt(D.noYeshuv)} ללא שיוך יישובי (אינן מוצגות ברמת יישוב).</p>`;
+}
+</script>
+</body>
+</html>

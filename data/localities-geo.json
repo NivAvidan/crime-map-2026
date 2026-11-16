@@ -1,0 +1,1364 @@
+{
+ "26": {
+  "name": "ראש פינה",
+  "lat": 32.968215,
+  "lon": 35.5438245,
+  "source": "osm-overpass"
+ },
+ "28": {
+  "name": "מזכרת בתיה",
+  "lat": 31.8514378,
+  "lon": 34.8411635,
+  "source": "osm-overpass"
+ },
+ "29": {
+  "name": "יסוד המעלה",
+  "lat": 33.0584461,
+  "lon": 35.6079395,
+  "source": "osm-overpass"
+ },
+ "31": {
+  "name": "אופקים",
+  "lat": 31.3125831,
+  "lon": 34.6208537,
+  "source": "osm-overpass"
+ },
+ "41": {
+  "name": "אליכין",
+  "lat": 32.4079533,
+  "lon": 34.9248732,
+  "source": "osm-overpass"
+ },
+ "43": {
+  "name": "מטולה",
+  "lat": 33.2799815,
+  "lon": 35.5779451,
+  "source": "osm-overpass"
+ },
+ "46": {
+  "name": "יבנאל",
+  "lat": 32.7054565,
+  "lon": 35.5052619,
+  "source": "osm-overpass"
+ },
+ "47": {
+  "name": "כפר תבור",
+  "lat": 32.6878053,
+  "lon": 35.4204202,
+  "source": "osm-overpass"
+ },
+ "53": {
+  "name": "עתלית",
+  "lat": 32.690712,
+  "lon": 34.9422744,
+  "source": "osm-overpass"
+ },
+ "65": {
+  "name": "מגדל",
+  "lat": 32.8387154,
+  "lon": 35.4993634,
+  "source": "osm-overpass"
+ },
+ "70": {
+  "name": "אשדוד",
+  "lat": 31.7977314,
+  "lon": 34.6529922,
+  "source": "osm-overpass"
+ },
+ "99": {
+  "name": "מצפה רמון",
+  "lat": 30.6119687,
+  "lon": 34.8012169,
+  "source": "osm-overpass"
+ },
+ "122": {
+  "name": "רמת ישי",
+  "lat": 32.7024925,
+  "lon": 35.1652427,
+  "source": "osm-overpass"
+ },
+ "154": {
+  "name": "תל מונד",
+  "lat": 32.2536471,
+  "lon": 34.9185387,
+  "source": "osm-overpass"
+ },
+ "166": {
+  "name": "גן יבנה",
+  "lat": 31.787109,
+  "lon": 34.7096635,
+  "source": "osm-overpass"
+ },
+ "168": {
+  "name": "כפר יונה",
+  "lat": 32.314504,
+  "lon": 34.9321169,
+  "source": "osm-overpass"
+ },
+ "171": {
+  "name": "פרדסיה",
+  "lat": 32.3070353,
+  "lon": 34.9097723,
+  "source": "osm-overpass"
+ },
+ "182": {
+  "name": "אבן יהודה",
+  "lat": 32.2724852,
+  "lon": 34.886767,
+  "source": "osm-overpass"
+ },
+ "195": {
+  "name": "קדימה צורן",
+  "lat": 32.2764459,
+  "lon": 34.9125436,
+  "source": "osm-nominatim"
+ },
+ "229": {
+  "name": "גני תקווה",
+  "lat": 32.0604256,
+  "lon": 34.8760954,
+  "source": "osm-overpass"
+ },
+ "240": {
+  "name": "יקנעם עילית",
+  "lat": 32.6480601,
+  "lon": 35.0943545,
+  "source": "osm-nominatim"
+ },
+ "246": {
+  "name": "נתיבות",
+  "lat": 31.4213546,
+  "lon": 34.5884252,
+  "source": "osm-overpass"
+ },
+ "267": {
+  "name": "כפר שמריהו",
+  "lat": 32.1853666,
+  "lon": 34.8197755,
+  "source": "osm-overpass"
+ },
+ "466": {
+  "name": "בית דגן",
+  "lat": 32.001945,
+  "lon": 34.8301626,
+  "source": "osm-overpass"
+ },
+ "469": {
+  "name": "קרית עקרון",
+  "lat": 31.8607858,
+  "lon": 34.823337,
+  "source": "osm-overpass"
+ },
+ "472": {
+  "name": "אבו גוש",
+  "lat": 31.806353,
+  "lon": 35.1088651,
+  "source": "osm-overpass"
+ },
+ "473": {
+  "name": "אבו סנאן",
+  "lat": 32.958648,
+  "lon": 35.1716603,
+  "source": "osm-overpass"
+ },
+ "478": {
+  "name": "אכסאל",
+  "lat": 32.6746024,
+  "lon": 35.2911845,
+  "source": "osm-nominatim"
+ },
+ "480": {
+  "name": "בית ג'ן",
+  "lat": 32.9644737,
+  "lon": 35.3781433,
+  "source": "osm-overpass"
+ },
+ "481": {
+  "name": "מגאר",
+  "lat": 32.8869441,
+  "lon": 35.406944,
+  "source": "osm-overpass"
+ },
+ "483": {
+  "name": "ביענה",
+  "lat": 32.8081096,
+  "lon": 35.3679195,
+  "source": "osm-nominatim"
+ },
+ "485": {
+  "name": "ג'וליס",
+  "lat": 32.9430618,
+  "lon": 35.1869431,
+  "source": "osm-overpass"
+ },
+ "487": {
+  "name": "ג'יש",
+  "lat": 32.8598226,
+  "lon": 35.2938151,
+  "source": "osm-nominatim"
+ },
+ "489": {
+  "name": "דבוריה",
+  "lat": 32.6927785,
+  "lon": 35.3716044,
+  "source": "osm-overpass"
+ },
+ "490": {
+  "name": "דייר אל אסד",
+  "lat": 32.934772,
+  "lon": 35.2668276,
+  "source": "osm-overpass"
+ },
+ "492": {
+  "name": "דייר חנא",
+  "lat": 32.8625037,
+  "lon": 35.3666613,
+  "source": "osm-overpass"
+ },
+ "494": {
+  "name": "דאלית אל כרמל",
+  "lat": 32.6922393,
+  "lon": 35.0482785,
+  "source": "osm-nominatim"
+ },
+ "496": {
+  "name": "חורפיש",
+  "lat": 33.01737,
+  "lon": 35.3469551,
+  "source": "osm-overpass"
+ },
+ "498": {
+  "name": "טורעאן",
+  "lat": 32.7768932,
+  "lon": 35.3740314,
+  "source": "osm-overpass"
+ },
+ "499": {
+  "name": "יפיע",
+  "lat": 32.6865923,
+  "lon": 35.2772128,
+  "source": "osm-nominatim"
+ },
+ "502": {
+  "name": "ירכא",
+  "lat": 32.9548871,
+  "lon": 35.2087895,
+  "source": "osm-overpass"
+ },
+ "504": {
+  "name": "כאבול",
+  "lat": 32.8677008,
+  "lon": 35.2100551,
+  "source": "osm-overpass"
+ },
+ "505": {
+  "name": "כאוכב אבו אל היגא",
+  "lat": 32.8309185,
+  "lon": 35.2494826,
+  "source": "osm-overpass"
+ },
+ "507": {
+  "name": "כפר יאסיף",
+  "lat": 32.9533067,
+  "lon": 35.165698,
+  "source": "osm-overpass"
+ },
+ "508": {
+  "name": "כפר כמא",
+  "lat": 32.721053,
+  "lon": 35.4407705,
+  "source": "osm-overpass"
+ },
+ "509": {
+  "name": "כפר כנא",
+  "lat": 32.7459862,
+  "lon": 35.3398025,
+  "source": "osm-overpass"
+ },
+ "510": {
+  "name": "כפר מנדא",
+  "lat": 32.8114088,
+  "lon": 35.259756,
+  "source": "osm-overpass"
+ },
+ "511": {
+  "name": "עילוט",
+  "lat": 32.718281,
+  "lon": 35.2612603,
+  "source": "osm-nominatim"
+ },
+ "516": {
+  "name": "מג'ד אל כרום",
+  "lat": 32.9225771,
+  "lon": 35.2579504,
+  "source": "osm-overpass"
+ },
+ "517": {
+  "name": "מזרעה",
+  "lat": 32.9833034,
+  "lon": 35.098342,
+  "source": "osm-overpass"
+ },
+ "518": {
+  "name": "מעיליא",
+  "lat": 33.0280627,
+  "lon": 35.25833,
+  "source": "osm-overpass"
+ },
+ "520": {
+  "name": "משהד",
+  "lat": 32.7401998,
+  "lon": 35.3245126,
+  "source": "osm-overpass"
+ },
+ "522": {
+  "name": "נחף",
+  "lat": 32.9345686,
+  "lon": 35.31763,
+  "source": "osm-overpass"
+ },
+ "525": {
+  "name": "סאג'ור",
+  "lat": 32.9419893,
+  "lon": 35.3421983,
+  "source": "osm-overpass"
+ },
+ "529": {
+  "name": "אעבלין",
+  "lat": 32.8209166,
+  "lon": 35.19133,
+  "source": "osm-nominatim"
+ },
+ "530": {
+  "name": "עיילבון",
+  "lat": 32.8349228,
+  "lon": 35.4011051,
+  "source": "osm-overpass"
+ },
+ "531": {
+  "name": "עראבה",
+  "lat": 32.8486259,
+  "lon": 35.3358268,
+  "source": "osm-overpass"
+ },
+ "532": {
+  "name": "עין מאהל",
+  "lat": 32.7233235,
+  "lon": 35.352732,
+  "source": "osm-overpass"
+ },
+ "534": {
+  "name": "עספיא",
+  "lat": 32.7152045,
+  "lon": 35.0671011,
+  "source": "osm-overpass"
+ },
+ "535": {
+  "name": "פסוטה",
+  "lat": 33.0484375,
+  "lon": 35.3100248,
+  "source": "osm-overpass"
+ },
+ "536": {
+  "name": "פקיעין",
+  "lat": 32.9772377,
+  "lon": 35.3339889,
+  "source": "osm-overpass"
+ },
+ "537": {
+  "name": "פוריידיס",
+  "lat": 32.5988242,
+  "lon": 34.9542319,
+  "source": "osm-overpass"
+ },
+ "538": {
+  "name": "שעב",
+  "lat": 32.8905934,
+  "lon": 35.2383757,
+  "source": "osm-overpass"
+ },
+ "541": {
+  "name": "ג'סר א זרקא",
+  "lat": 32.5375618,
+  "lon": 34.9132199,
+  "source": "osm-overpass"
+ },
+ "542": {
+  "name": "ריינה",
+  "lat": 32.723612,
+  "lon": 35.312492,
+  "source": "osm-overpass"
+ },
+ "543": {
+  "name": "ראמה",
+  "lat": 32.9379719,
+  "lon": 35.3675664,
+  "source": "osm-overpass"
+ },
+ "565": {
+  "name": "אזור",
+  "lat": 32.0282087,
+  "lon": 34.802593,
+  "source": "osm-overpass"
+ },
+ "587": {
+  "name": "סביון",
+  "lat": 32.0475371,
+  "lon": 34.8799172,
+  "source": "osm-overpass"
+ },
+ "627": {
+  "name": "ג'לג'וליה",
+  "lat": 32.152285,
+  "lon": 34.9536543,
+  "source": "osm-overpass"
+ },
+ "628": {
+  "name": "ג'ת",
+  "lat": 31.6268616,
+  "lon": 34.7951088,
+  "source": "osm-overpass"
+ },
+ "633": {
+  "name": "כפר ברא",
+  "lat": 32.1310918,
+  "lon": 34.9703305,
+  "source": "osm-overpass"
+ },
+ "634": {
+  "name": "כפר קאסם",
+  "lat": 32.1152014,
+  "lon": 34.9752609,
+  "source": "osm-overpass"
+ },
+ "637": {
+  "name": "ערערה",
+  "lat": 32.4965507,
+  "lon": 35.0955581,
+  "source": "osm-overpass"
+ },
+ "638": {
+  "name": "קלנסווה",
+  "lat": 32.2848603,
+  "lon": 34.9801701,
+  "source": "osm-overpass"
+ },
+ "654": {
+  "name": "כפר קרע",
+  "lat": 32.5029914,
+  "lon": 35.0504995,
+  "source": "osm-overpass"
+ },
+ "666": {
+  "name": "עומר",
+  "lat": 31.2659365,
+  "lon": 34.847616,
+  "source": "osm-overpass"
+ },
+ "681": {
+  "name": "גבעת שמואל",
+  "lat": 32.0769463,
+  "lon": 34.8524656,
+  "source": "osm-overpass"
+ },
+ "696": {
+  "name": "כפר חב''ד",
+  "lat": 31.9885794,
+  "lon": 34.8473705,
+  "source": "osm-overpass"
+ },
+ "812": {
+  "name": "שלומי",
+  "lat": 33.0721259,
+  "lon": 35.1451088,
+  "source": "osm-overpass"
+ },
+ "831": {
+  "name": "ירוחם",
+  "lat": 30.9888033,
+  "lon": 34.9250975,
+  "source": "osm-overpass"
+ },
+ "874": {
+  "name": "מגדל העמק",
+  "lat": 32.6765744,
+  "lon": 35.2413237,
+  "source": "osm-overpass"
+ },
+ "913": {
+  "name": "שבלי",
+  "lat": 32.6937221,
+  "lon": 35.3960008,
+  "source": "osm-nominatim"
+ },
+ "922": {
+  "name": "רכסים",
+  "lat": 32.7509558,
+  "lon": 35.1013589,
+  "source": "osm-overpass"
+ },
+ "944": {
+  "name": "בסמת טבעון",
+  "lat": 32.7362276,
+  "lon": 35.1546502,
+  "source": "osm-overpass"
+ },
+ "962": {
+  "name": "טובא זנגריה",
+  "lat": 32.9663198,
+  "lon": 35.5944243,
+  "source": "osm-overpass"
+ },
+ "975": {
+  "name": "זרזיר",
+  "lat": 32.7274275,
+  "lon": 35.2133545,
+  "source": "osm-overpass"
+ },
+ "978": {
+  "name": "כעביה טבאש חג'אג'רה",
+  "lat": 32.7488538,
+  "lon": 35.1840965,
+  "source": "osm-overpass"
+ },
+ "998": {
+  "name": "ביר אל מכסור",
+  "lat": 32.7756653,
+  "lon": 35.2216911,
+  "source": "osm-overpass"
+ },
+ "1015": {
+  "name": "מבשרת ציון",
+  "lat": 31.8057198,
+  "lon": 35.152731,
+  "source": "osm-overpass"
+ },
+ "1020": {
+  "name": "אור עקיבא",
+  "lat": 32.5090151,
+  "lon": 34.9195677,
+  "source": "osm-overpass"
+ },
+ "1031": {
+  "name": "שדרות",
+  "lat": 31.526474,
+  "lon": 34.5969696,
+  "source": "osm-overpass"
+ },
+ "1034": {
+  "name": "קרית מלאכי",
+  "lat": 31.7316015,
+  "lon": 34.7446145,
+  "source": "osm-overpass"
+ },
+ "1054": {
+  "name": "תל שבע",
+  "lat": 31.2456487,
+  "lon": 34.8577683,
+  "source": "osm-overpass"
+ },
+ "1059": {
+  "name": "כסיפה",
+  "lat": 31.2465374,
+  "lon": 35.0930574,
+  "source": "osm-overpass"
+ },
+ "1060": {
+  "name": "לקיה",
+  "lat": 31.324666,
+  "lon": 34.8661185,
+  "source": "osm-overpass"
+ },
+ "1061": {
+  "name": "נוף הגליל",
+  "lat": 32.7023065,
+  "lon": 35.3183216,
+  "source": "osm-overpass"
+ },
+ "1063": {
+  "name": "מעלות-תרשיחא",
+  "lat": 33.0157394,
+  "lon": 35.2759666,
+  "source": "osm-overpass"
+ },
+ "1066": {
+  "name": "בני עי''ש",
+  "lat": 31.7891954,
+  "lon": 34.7605995,
+  "source": "osm-overpass"
+ },
+ "1113": {
+  "name": "צור הדסה",
+  "lat": 31.7156945,
+  "lon": 35.0948306,
+  "source": "osm-overpass"
+ },
+ "1137": {
+  "name": "קרית יערים",
+  "lat": 31.8035128,
+  "lon": 35.1012545,
+  "source": "osm-overpass"
+ },
+ "1139": {
+  "name": "כרמיאל",
+  "lat": 32.9159104,
+  "lon": 35.293429,
+  "source": "osm-overpass"
+ },
+ "1161": {
+  "name": "רהט",
+  "lat": 31.3933637,
+  "lon": 34.7546784,
+  "source": "osm-overpass"
+ },
+ "1167": {
+  "name": "קיסריה",
+  "lat": 32.5131378,
+  "lon": 34.905839,
+  "source": "osm-overpass"
+ },
+ "1192": {
+  "name": "ערערה-בנגב",
+  "lat": 31.1595078,
+  "lon": 35.0230464,
+  "source": "osm-overpass"
+ },
+ "1200": {
+  "name": "מודיעין-מכבים-רעות",
+  "lat": 31.9085744,
+  "lon": 35.0069297,
+  "source": "osm-overpass"
+ },
+ "1224": {
+  "name": "כוכב יאיר",
+  "lat": 32.2201627,
+  "lon": 34.993953,
+  "source": "osm-nominatim"
+ },
+ "1247": {
+  "name": "חריש",
+  "lat": 32.45964,
+  "lon": 35.0510843,
+  "source": "osm-overpass"
+ },
+ "1263": {
+  "name": "כפר ורדים",
+  "lat": 32.9957424,
+  "lon": 35.2764388,
+  "source": "osm-overpass"
+ },
+ "1268": {
+  "name": "מיתר",
+  "lat": 31.3270854,
+  "lon": 34.9384389,
+  "source": "osm-overpass"
+ },
+ "1271": {
+  "name": "להבים",
+  "lat": 31.3703233,
+  "lon": 34.8136886,
+  "source": "osm-overpass"
+ },
+ "1286": {
+  "name": "שגב-שלום",
+  "lat": 31.2008757,
+  "lon": 34.8400872,
+  "source": "osm-overpass"
+ },
+ "1290": {
+  "name": "זמר",
+  "lat": 32.36221,
+  "lon": 35.0325131,
+  "source": "osm-nominatim"
+ },
+ "1292": {
+  "name": "ג'דיידה-מכר",
+  "lat": 32.9295345,
+  "lon": 35.1467283,
+  "source": "osm-overpass"
+ },
+ "1295": {
+  "name": "יאנוח-ג'ת",
+  "lat": 32.9836711,
+  "lon": 35.2519112,
+  "source": "osm-nominatim"
+ },
+ "1296": {
+  "name": "כסרא-סמיע",
+  "lat": 32.988357,
+  "lon": 35.319937,
+  "source": "osm-nominatim"
+ },
+ "1303": {
+  "name": "חורה",
+  "lat": 31.2972468,
+  "lon": 34.9379061,
+  "source": "osm-overpass"
+ },
+ "1304": {
+  "name": "שוהם",
+  "lat": 32.0004845,
+  "lon": 34.9465419,
+  "source": "osm-overpass"
+ },
+ "1309": {
+  "name": "אלעד",
+  "lat": 32.0500659,
+  "lon": 34.9521522,
+  "source": "osm-overpass"
+ },
+ "1319": {
+  "name": "בת חפר",
+  "lat": 32.3345015,
+  "lon": 35.012351,
+  "source": "osm-overpass"
+ },
+ "1326": {
+  "name": "בסמ''ה",
+  "lat": 32.5323092,
+  "lon": 35.1048328,
+  "source": "osm-nominatim"
+ },
+ "1327": {
+  "name": "מעלה עירון",
+  "lat": 32.5494975,
+  "lon": 35.1544857,
+  "source": "osm-nominatim"
+ },
+ "1345": {
+  "name": "צור יצחק",
+  "lat": 32.24124,
+  "lon": 34.9983819,
+  "source": "osm-overpass"
+ },
+ "1348": {
+  "name": "ביר הדאג'",
+  "lat": 31.0262625,
+  "lon": 34.7031024,
+  "source": "osm-overpass"
+ },
+ "1359": {
+  "name": "א סייד",
+  "lat": 31.2811911,
+  "lon": 34.9317593,
+  "source": "osm-nominatim"
+ },
+ "1722": {
+  "name": "מגדל תפן",
+  "lat": 32.9753916,
+  "lon": 35.2770876,
+  "source": "osm-nominatim"
+ },
+ "1724": {
+  "name": "תרדיון",
+  "lat": 32.048166,
+  "lon": 34.7927575,
+  "source": "osm-nominatim"
+ },
+ "1727": {
+  "name": "אזור תעשייה נעמן",
+  "lat": 32.8898848,
+  "lon": 35.0886674,
+  "source": "osm-nominatim"
+ },
+ "1739": {
+  "name": "מפעלי גרנות",
+  "lat": 32.4441578,
+  "lon": 34.953724,
+  "source": "osm-nominatim"
+ },
+ "1745": {
+  "name": "פארק תעשיות עמק חפר",
+  "lat": 32.4013587,
+  "lon": 34.8965542,
+  "source": "osm-nominatim"
+ },
+ "1746": {
+  "name": "קרית שדה התעופה",
+  "lat": 31.9866237,
+  "lon": 34.9136169,
+  "source": "osm-nominatim"
+ },
+ "1748": {
+  "name": "נמל תעופה בן גוריון",
+  "lat": 32.0004041,
+  "lon": 34.8704796,
+  "source": "osm-nominatim"
+ },
+ "1749": {
+  "name": "תעשיון צריפין",
+  "lat": 31.9622751,
+  "lon": 34.8530571,
+  "source": "osm-nominatim"
+ },
+ "1754": {
+  "name": "פארק תעשיות ראם",
+  "lat": 31.7728768,
+  "lon": 34.7544416,
+  "source": "osm-nominatim"
+ },
+ "1755": {
+  "name": "תעשיון ראם",
+  "lat": 31.900325,
+  "lon": 34.809449,
+  "source": "osm-nominatim"
+ },
+ "1762": {
+  "name": "עד הלום",
+  "lat": 31.8011962,
+  "lon": 34.6614026,
+  "source": "osm-nominatim"
+ },
+ "1765": {
+  "name": "פארק תעשיות עידן הנגב",
+  "lat": 31.380758,
+  "lon": 34.785969,
+  "source": "osm-nominatim"
+ },
+ "1770": {
+  "name": "נאות חובב",
+  "lat": 31.1117063,
+  "lon": 34.8976892,
+  "source": "osm-nominatim"
+ },
+ "1775": {
+  "name": "מפעלי ים המלח",
+  "lat": 31.0336155,
+  "lon": 35.36642,
+  "source": "osm-nominatim"
+ },
+ "2034": {
+  "name": "חצור הגלילית",
+  "lat": 32.9791697,
+  "lon": 35.543327,
+  "source": "osm-overpass"
+ },
+ "2100": {
+  "name": "טירת כרמל",
+  "lat": 32.7613834,
+  "lon": 34.9715506,
+  "source": "osm-overpass"
+ },
+ "2200": {
+  "name": "דימונה",
+  "lat": 31.0686612,
+  "lon": 35.0366482,
+  "source": "osm-overpass"
+ },
+ "2300": {
+  "name": "קרית טבעון",
+  "lat": 32.7161543,
+  "lon": 35.126841,
+  "source": "osm-overpass"
+ },
+ "2400": {
+  "name": "אור יהודה",
+  "lat": 32.0270045,
+  "lon": 34.8629898,
+  "source": "osm-overpass"
+ },
+ "2500": {
+  "name": "נשר",
+  "lat": 32.7708797,
+  "lon": 35.0381249,
+  "source": "osm-overpass"
+ },
+ "2530": {
+  "name": "באר יעקב",
+  "lat": 31.9443532,
+  "lon": 34.8398648,
+  "source": "osm-overpass"
+ },
+ "2550": {
+  "name": "גדרה",
+  "lat": 31.8117747,
+  "lon": 34.7803882,
+  "source": "osm-overpass"
+ },
+ "2560": {
+  "name": "ערד",
+  "lat": 31.2612199,
+  "lon": 35.214581,
+  "source": "osm-overpass"
+ },
+ "2600": {
+  "name": "אילת",
+  "lat": 29.5569348,
+  "lon": 34.9497949,
+  "source": "osm-overpass"
+ },
+ "2610": {
+  "name": "בית שמש",
+  "lat": 31.746214,
+  "lon": 34.9886825,
+  "source": "osm-overpass"
+ },
+ "2620": {
+  "name": "קרית אונו",
+  "lat": 32.0591691,
+  "lon": 34.8594303,
+  "source": "osm-overpass"
+ },
+ "2630": {
+  "name": "קרית גת",
+  "lat": 31.6093998,
+  "lon": 34.7711983,
+  "source": "osm-overpass"
+ },
+ "2640": {
+  "name": "ראש העין",
+  "lat": 32.0952929,
+  "lon": 34.9533225,
+  "source": "osm-overpass"
+ },
+ "2650": {
+  "name": "רמת השרון",
+  "lat": 32.1431276,
+  "lon": 34.8380853,
+  "source": "osm-overpass"
+ },
+ "2660": {
+  "name": "יבנה",
+  "lat": 31.8768863,
+  "lon": 34.7382974,
+  "source": "osm-overpass"
+ },
+ "2710": {
+  "name": "אום אל-פחם",
+  "lat": 32.5158385,
+  "lon": 35.152491,
+  "source": "osm-overpass"
+ },
+ "2720": {
+  "name": "טירה",
+  "lat": 32.2346856,
+  "lon": 34.9544553,
+  "source": "osm-overpass"
+ },
+ "2730": {
+  "name": "טייבה",
+  "lat": 32.2671249,
+  "lon": 35.0089029,
+  "source": "osm-overpass"
+ },
+ "2800": {
+  "name": "קרית שמונה",
+  "lat": 33.2074733,
+  "lon": 35.5707828,
+  "source": "osm-overpass"
+ },
+ "3000": {
+  "name": "ירושלים",
+  "lat": 31.7788472,
+  "lon": 35.2257856,
+  "source": "osm-overpass"
+ },
+ "3557": {
+  "name": "קדומים",
+  "lat": 32.217657,
+  "lon": 35.1603555,
+  "source": "osm-overpass"
+ },
+ "3560": {
+  "name": "אלקנה",
+  "lat": 32.1116176,
+  "lon": 35.0354721,
+  "source": "osm-overpass"
+ },
+ "3570": {
+  "name": "אריאל",
+  "lat": 32.1060817,
+  "lon": 35.1851368,
+  "source": "osm-overpass"
+ },
+ "3574": {
+  "name": "בית אל",
+  "lat": 31.9420729,
+  "lon": 35.2224417,
+  "source": "osm-overpass"
+ },
+ "3608": {
+  "name": "מעלה אפרים",
+  "lat": 32.0707628,
+  "lon": 35.4034322,
+  "source": "osm-overpass"
+ },
+ "3611": {
+  "name": "קרית ארבע",
+  "lat": 31.5277619,
+  "lon": 35.1191651,
+  "source": "osm-overpass"
+ },
+ "3616": {
+  "name": "מעלה אדומים",
+  "lat": 31.7706181,
+  "lon": 35.2984501,
+  "source": "osm-overpass"
+ },
+ "3638": {
+  "name": "כפר אדומים",
+  "lat": 31.8252834,
+  "lon": 35.3352109,
+  "source": "osm-overpass"
+ },
+ "3640": {
+  "name": "קרני שומרון",
+  "lat": 32.1709826,
+  "lon": 35.08924,
+  "source": "osm-overpass"
+ },
+ "3650": {
+  "name": "אפרת",
+  "lat": 31.6536462,
+  "lon": 35.1508714,
+  "source": "osm-overpass"
+ },
+ "3652": {
+  "name": "בית אריה",
+  "lat": 32.0341444,
+  "lon": 35.0501858,
+  "source": "osm-overpass"
+ },
+ "3660": {
+  "name": "עמנואל",
+  "lat": 32.1618975,
+  "lon": 35.1361352,
+  "source": "osm-overpass"
+ },
+ "3730": {
+  "name": "גבעת זאב",
+  "lat": 31.8623329,
+  "lon": 35.1687498,
+  "source": "osm-overpass"
+ },
+ "3750": {
+  "name": "אלפי מנשה",
+  "lat": 32.1730798,
+  "lon": 35.0158426,
+  "source": "osm-overpass"
+ },
+ "3760": {
+  "name": "אורנית",
+  "lat": 32.1309209,
+  "lon": 34.9919607,
+  "source": "osm-overpass"
+ },
+ "3763": {
+  "name": "גבע בנימין",
+  "lat": 31.8503299,
+  "lon": 35.2739808,
+  "source": "osm-nominatim"
+ },
+ "3769": {
+  "name": "הר אדר",
+  "lat": 31.826857,
+  "lon": 35.1295577,
+  "source": "osm-overpass"
+ },
+ "3779": {
+  "name": "כוכב יעקב",
+  "lat": 31.8814286,
+  "lon": 35.2452887,
+  "source": "osm-overpass"
+ },
+ "3780": {
+  "name": "ביתר עילית",
+  "lat": 31.6989467,
+  "lon": 35.1137333,
+  "source": "osm-overpass"
+ },
+ "3788": {
+  "name": "טלמון",
+  "lat": 31.9393963,
+  "lon": 35.1323035,
+  "source": "osm-overpass"
+ },
+ "3797": {
+  "name": "מודיעין עילית",
+  "lat": 31.9324487,
+  "lon": 35.0433428,
+  "source": "osm-overpass"
+ },
+ "3826": {
+  "name": "שער שומרון",
+  "lat": 32.1067456,
+  "lon": 34.999554,
+  "source": "osm-nominatim"
+ },
+ "4000": {
+  "name": "חיפה",
+  "lat": 32.8191218,
+  "lon": 34.9983856,
+  "source": "osm-overpass"
+ },
+ "4001": {
+  "name": "בוקעתא",
+  "lat": 33.20076,
+  "lon": 35.7779892,
+  "source": "osm-nominatim"
+ },
+ "4100": {
+  "name": "קצרין",
+  "lat": 32.9920262,
+  "lon": 35.6877004,
+  "source": "osm-overpass"
+ },
+ "4201": {
+  "name": "מג'דל שמס",
+  "lat": 33.2684288,
+  "lon": 35.769371,
+  "source": "osm-overpass"
+ },
+ "4203": {
+  "name": "מסעדה",
+  "lat": 33.2312137,
+  "lon": 35.7574829,
+  "source": "osm-overpass"
+ },
+ "4501": {
+  "name": "ע'ג'ר",
+  "lat": 33.2721727,
+  "lon": 35.6239112,
+  "source": "osm-overpass"
+ },
+ "4502": {
+  "name": "עין קנייא",
+  "lat": 33.2360284,
+  "lon": 35.731055,
+  "source": "osm-overpass"
+ },
+ "5000": {
+  "name": "תל אביב יפו",
+  "lat": 32.0852997,
+  "lon": 34.7818064,
+  "source": "osm-overpass"
+ },
+ "6000": {
+  "name": "באקה אל-גרביה",
+  "lat": 32.4197144,
+  "lon": 35.0428311,
+  "source": "osm-overpass"
+ },
+ "6100": {
+  "name": "בני ברק",
+  "lat": 32.0873899,
+  "lon": 34.8324376,
+  "source": "osm-overpass"
+ },
+ "6200": {
+  "name": "בת ים",
+  "lat": 32.0154565,
+  "lon": 34.7505283,
+  "source": "osm-overpass"
+ },
+ "6300": {
+  "name": "גבעתיים",
+  "lat": 32.0729606,
+  "lon": 34.8113279,
+  "source": "osm-overpass"
+ },
+ "6400": {
+  "name": "הרצליה",
+  "lat": 32.1656255,
+  "lon": 34.8469023,
+  "source": "osm-overpass"
+ },
+ "6500": {
+  "name": "חדרה",
+  "lat": 32.43699,
+  "lon": 34.9198258,
+  "source": "osm-overpass"
+ },
+ "6600": {
+  "name": "חולון",
+  "lat": 32.0193121,
+  "lon": 34.7804076,
+  "source": "osm-overpass"
+ },
+ "6700": {
+  "name": "טבריה",
+  "lat": 32.7938522,
+  "lon": 35.5328566,
+  "source": "osm-overpass"
+ },
+ "6800": {
+  "name": "קרית אתא",
+  "lat": 32.8115853,
+  "lon": 35.1163747,
+  "source": "osm-overpass"
+ },
+ "6900": {
+  "name": "כפר סבא",
+  "lat": 32.1773471,
+  "lon": 34.907459,
+  "source": "osm-overpass"
+ },
+ "7000": {
+  "name": "לוד",
+  "lat": 31.9489012,
+  "lon": 34.8884857,
+  "source": "osm-overpass"
+ },
+ "7100": {
+  "name": "אשקלון",
+  "lat": 31.6653955,
+  "lon": 34.5650114,
+  "source": "osm-overpass"
+ },
+ "7200": {
+  "name": "נס ציונה",
+  "lat": 31.9295577,
+  "lon": 34.7990609,
+  "source": "osm-overpass"
+ },
+ "7300": {
+  "name": "נצרת",
+  "lat": 32.7066289,
+  "lon": 35.3048495,
+  "source": "osm-overpass"
+ },
+ "7400": {
+  "name": "נתניה",
+  "lat": 32.3286181,
+  "lon": 34.8566246,
+  "source": "osm-overpass"
+ },
+ "7500": {
+  "name": "סח'נין",
+  "lat": 32.8638052,
+  "lon": 35.3023184,
+  "source": "osm-nominatim"
+ },
+ "7600": {
+  "name": "עכו",
+  "lat": 32.9281731,
+  "lon": 35.0756378,
+  "source": "osm-overpass"
+ },
+ "7700": {
+  "name": "עפולה",
+  "lat": 32.6075587,
+  "lon": 35.2890861,
+  "source": "osm-overpass"
+ },
+ "7800": {
+  "name": "פרדס חנה-כרכור",
+  "lat": 32.4749962,
+  "lon": 34.975139,
+  "source": "osm-overpass"
+ },
+ "7900": {
+  "name": "פתח תקווה",
+  "lat": 32.0877639,
+  "lon": 34.8859985,
+  "source": "osm-overpass"
+ },
+ "8000": {
+  "name": "צפת",
+  "lat": 32.9661912,
+  "lon": 35.4961475,
+  "source": "osm-overpass"
+ },
+ "8200": {
+  "name": "קרית מוצקין",
+  "lat": 32.8363747,
+  "lon": 35.0752109,
+  "source": "osm-overpass"
+ },
+ "8300": {
+  "name": "ראשון לציון",
+  "lat": 31.9635712,
+  "lon": 34.8101149,
+  "source": "osm-overpass"
+ },
+ "8400": {
+  "name": "רחובות",
+  "lat": 31.8952532,
+  "lon": 34.8105616,
+  "source": "osm-overpass"
+ },
+ "8500": {
+  "name": "רמלה",
+  "lat": 31.9279988,
+  "lon": 34.8623473,
+  "source": "osm-overpass"
+ },
+ "8600": {
+  "name": "רמת גן",
+  "lat": 32.0686867,
+  "lon": 34.8246812,
+  "source": "osm-overpass"
+ },
+ "8700": {
+  "name": "רעננה",
+  "lat": 32.1860244,
+  "lon": 34.8678359,
+  "source": "osm-overpass"
+ },
+ "8800": {
+  "name": "שפרעם",
+  "lat": 32.8045765,
+  "lon": 35.1723866,
+  "source": "osm-overpass"
+ },
+ "8900": {
+  "name": "טמרה",
+  "lat": 32.8534876,
+  "lon": 35.1978748,
+  "source": "osm-overpass"
+ },
+ "9000": {
+  "name": "באר שבע",
+  "lat": 31.2457442,
+  "lon": 34.7925181,
+  "source": "osm-overpass"
+ },
+ "9100": {
+  "name": "נהריה",
+  "lat": 33.006306,
+  "lon": 35.0945579,
+  "source": "osm-overpass"
+ },
+ "9200": {
+  "name": "בית שאן",
+  "lat": 32.4967519,
+  "lon": 35.4973022,
+  "source": "osm-overpass"
+ },
+ "9300": {
+  "name": "זכרון יעקב",
+  "lat": 32.5711587,
+  "lon": 34.9529966,
+  "source": "osm-overpass"
+ },
+ "9400": {
+  "name": "יהוד-מונוסון",
+  "lat": 32.0331756,
+  "lon": 34.8907527,
+  "source": "osm-overpass"
+ },
+ "9500": {
+  "name": "קרית ביאליק",
+  "lat": 32.8285812,
+  "lon": 35.0844915,
+  "source": "osm-overpass"
+ },
+ "9600": {
+  "name": "קרית ים",
+  "lat": 32.8502229,
+  "lon": 35.0703245,
+  "source": "osm-overpass"
+ },
+ "9700": {
+  "name": "הוד השרון",
+  "lat": 32.1561974,
+  "lon": 34.8930354,
+  "source": "osm-overpass"
+ },
+ "9800": {
+  "name": "בנימינה-גבעת עדה",
+  "lat": 32.5202891,
+  "lon": 34.9435862,
+  "source": "osm-nominatim"
+ }
+}

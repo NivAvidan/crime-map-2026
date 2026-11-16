@@ -1,0 +1,14 @@
+{
+  "name": "crimemap",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "db": "docker compose up -d --wait",
+    "geocode": "npm --prefix server run geocode",
+    "import": "npm --prefix server run import",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "start:csv": "npm --prefix server run start:csv",
+    "dev:client": "npm --prefix client run dev"
+  }
+}
