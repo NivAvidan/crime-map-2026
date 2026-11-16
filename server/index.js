@@ -4,8 +4,10 @@ import { fileURLToPath } from 'node:url';
 import { chatRoute } from './chat.js';
 import { caseRoute, newsRoute } from './make.js';
 
-// DATA_SOURCE=oracle (default, target architecture) | csv (in-memory, no database needed)
-const store = await import(process.env.DATA_SOURCE === 'csv' ? './store-csv.js' : './store-oracle.js');
+// DATA_SOURCE=oracle (target architecture) | csv (in-memory, no database needed).
+// When unset: Oracle if a connection is configured (DB_CONNECT), otherwise the CSV.
+const source = process.env.DATA_SOURCE || (process.env.DB_CONNECT ? 'oracle' : 'csv');
+const store = await import(source === 'csv' ? './store-csv.js' : './store-oracle.js');
 
 const app = express();
 const wrap = (fn) => (req, res, next) => fn(req, res).catch(next);

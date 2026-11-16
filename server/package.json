@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node --env-file=../.env index.js",
-    "start:csv": "node --env-file=../.env --env-file=../.env.csv index.js",
-    "import": "node --env-file=../.env scripts/import.js",
+    "start": "node --env-file-if-exists=../.env index.js",
+    "start:csv": "node --env-file-if-exists=../.env --env-file=../.env.csv index.js",
+    "import": "node --env-file-if-exists=../.env scripts/import.js",
     "geocode": "node scripts/geocode.js"
   },
   "dependencies": {
